@@ -1,0 +1,6 @@
+<script type="deferjs" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+{{ $js := resources.Get "js/plugins.js" }}
+{{ $secureJS := $js | resources.Minify }}
+<script type="deferjs" src="{{ $secureJS.Permalink }}"></script>
+
+<script>deferimg('img[data-src],picture,video,audio')</script>

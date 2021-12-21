@@ -1,0 +1,29 @@
+baseURL:
+languageCode: en-us
+title: A Naked Hugo Site Title
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+enableRobotsTXT: true
+paginate: 1
+params:
+  twitter_user: kris_ray
+  twitter_link: https://twitter.com/
+  facebook_link: http://www.facebook.com/
+  instagram_link: https://www.instagram.com/
+  #google_analytics: UA-
+  paid_for: Paid for by Language Goes Here
+  form_endpoint: 123456
+markup:
+  goldmark:
+    parser:
+      autoHeadingID: false
+
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: -20
+    - name: News
+      url: /news/
+      weight: -10

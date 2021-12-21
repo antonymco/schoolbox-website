@@ -1,0 +1,12 @@
+/*The Foundation and Reset Based in Bootstrap 4.5.2*/
+@import "bootstrap/bootstrap.scss";
+
+/* Optional Features */
+@import "aos.scss"; /* Section Animations */
+@import "animate.scss"; /* Basic Animations */
+@import "magnific-popup.scss"; /* LightBox */
+
+/* Naked Framework Requirements */
+@import "variables.scss";
+@import "default.scss"; /*Do NOT modify*/
+@import "custom.scss";

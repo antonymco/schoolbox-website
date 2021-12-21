@@ -1,0 +1,41 @@
+<footer>
+    <div class="container">
+
+        <div class="row">
+            <div class="col text-center">
+                <ul class="social-share">
+                    {{ partial "social-share.html" . }}
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <ul id="footerSocial">
+                    {{ partial "social.html" . }}
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <p id="copyright" class="small">&copy; Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script>&nbsp;{{ .Site.Title }} - All Rights Reserved</p>
+            </div>
+        </div>
+
+        {{ if isset .Site.Params "paid_for" }}
+        <div class="row">
+            <div class="col text-center">
+                <p id="paidfor">
+
+                    {{ .Site.Params.paid_for }}
+
+                </p>
+            </div>
+        </div>
+        {{ else }}
+        {{ end }}
+
+
+    </div>
+</footer>
