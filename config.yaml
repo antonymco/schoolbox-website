@@ -1,6 +1,6 @@
 baseURL:
 languageCode: en-us
-title: A Naked Hugo Site Title
+title: Herzog Foundation
 disableKinds:
   - taxonomy
   - taxonomyTerm
@@ -21,9 +21,25 @@ markup:
 
 menu:
   main:
-    - name: Home
-      url: /
-      weight: -20
-    - name: News
-      url: /news/
-      weight: -10
+    - name: About
+      url: /#about
+      weight: 10
+    - name: What's Inside
+      url: /#whats-inside
+      weight: 20
+    - name: Eligibility
+      url: /#eligibility
+      weight: 30
+  footer:
+    - name: About
+      url: /#about
+      weight: 10
+    - name: What's Inside
+      url: /#whats-inside
+      weight: 20
+    - name: Eligibility
+      url: /#eligibility
+      weight: 30
+    - name: Contact Us
+      url: /#
+      weight: 40

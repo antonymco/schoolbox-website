@@ -1,118 +1,113 @@
 {{ partial "head.html" . }}
-
 <body id="home">
-
-{{ partial "header.html" . }}
-
-<section id="banner">
-
-<div class="container">
-
-    <div class="row">
-
-        <div class="col text-center animated fadeInDown delay-1">
-
-            <h1>{{ .Title }}</h1>
-
-            <p>{{ .Description }}</p>
-
-            <a href="#inquire" class="button open-popup-link">Lightbox &rsaquo;</a>
-
-        </div>
-
-    </div>
-
-</div>
-    <video playsinline autoplay muted loop poster='{{"video/bg.jpg" | relURL }}' data-src='{{"video/bg-small.mp4" | relURL }}' id="bgvid" class="lazy">
-        <source data-src='{{"video/bg-small.webm" | relURL }}' type="video/webm">
-        <source data-src='{{"video/bg-small.mp4" | relURL }}' type="video/mp4">
-    </video>
-</section>
-
-<section id="signup">
-    <div class="container">
-
-        {{ partial "signup.html" .}}
-
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="row align-items-center">
-
-            <div class="col-12 col-sm-6 aos-item" data-aos="fade-in">
-                <img src="https://picsum.photos/700" class="lazyload img-fluid" alt="Make sure to use IMG ALT Tag">
-            </div>
-
-            <div class="col aos-item" data-aos="fade-in">
-
-               {{ .Content }}
-
-                <a href="#inquire" class="open-popup-link button">Lightbox &rsaquo;</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<main>
-    <section>
+    {{ partial "header.html" . }}
+    <section id="banner">
         <div class="container">
-            <div class="row">
-                {{ range first 1 (where (.Site.RegularPages.ByParam "date") "Type" "news") }}
-                <div class="col col-sm-10 col-md-8 entry aos-item" data-aos="fade-in">
-                    {{ if .Params.image }}
-                    <img src='{{ .Param "image"}}' alt="Fighting For Icon">
-                    {{end}}
-                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                    <span>{{ .Date.Format "January 2, 2006" }}</span>
-                    <p>{{ .Description }}</p>
-                    <a href="{{ .Permalink }}" class="button buttonOutline">Read More</a>
+            <div class="row justify-content-center">
+                <div class="col col-12 col-md-10 col-lg-8 text-center animated fadeInDown delay-1">
+                    <h1>{{ .Params.banner_title | safeHTML }}</h1>
+                    <div class="bannerTxt">{{ .Description }}</div>
+                    <div class="bannerLinks">
+                        <a href="#" class="button">Explore the Curriculum ›</a>
+                        <a href="#" class="bannerLink">or Check Your Eligibility ›</a>
+                    </div>
                 </div>
-                {{end}}
             </div>
         </div>
     </section>
-</main>
+    <section id="whats-inside">
+        <div class="container">
+            <h3 class="titleWhatsInside text-center" data-aos="fade-down">What’s Inside:</h3>
+            <div class="row insideRow">
+                <div class="col col-12 col-md-4" data-aos="fade-right">
+                    <div class="insideBx">
+                        <div class="insideIcon"><img src='{{ "img/icon_inside_1.svg" | relURL }}'></div>
+                        <div class="insideMeta">
+                            <h4 class="insideTitle">11 step guide to Starting your School</h4>
+                            <div class="insideTxt">Schoolbox will walk you through the process of starting your Christian school from inception to your first academic years.</div>
+                        </div>
+                    </div>
+                </div>
 
-<section id="form">
+                <div class="col col-12 col-md-4" data-aos="fade-right">
+                    <div class="insideBx">
+                        <div class="insideIcon"><img src='{{ "img/icon_inside_2.svg" | relURL }}'></div>
+                        <div class="insideMeta">
+                            <h4 class="insideTitle">1-on-1 Coaching with a Mentor</h4>
+                            <div class="insideTxt">As you move through the SchoolBox program, you will be assigned an experienced mentor who has worked with a school similar to yours. </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col col-12 col-md-4" data-aos="fade-right">
+                    <div class="insideBx">
+                        <div class="insideIcon"><img src='{{ "img/icon_inside_3.svg" | relURL }}'></div>
+                        <div class="insideMeta">
+                            <h4 class="insideTitle">Examples and Best Practices</h4>
+                            <div class="insideTxt">SchoolBox will provide proven examples of school policies and documents to model, while also referring you to resources that can take your school to the next level.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="text-center" data-aos="fade-right"><a href="#" class="button">Explore the Curriculum ›</a></div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col col-12 col-md-6" data-aos="fade-right">
+                    <h3 class="sectionTitle text-blue">About SchoolBox</h3>
+                    <p>Our country is at a crossroads in our educational landscape. Parents, churches, and communities are realizing the importance and value of a high-quality Christian education. SchoolBox wants to walk alongside you and help make your new Christian school a reality!</p>
+                        <p><strong>Herzog Foundation's</strong> mission is to catalyze and accelerate the development of quality Christ-centered K-12 education so that families and culture flourish. We seek to identify areas of growth and gaps in the Christian education space in order to catalyze effective and scalable programs across the nation. Our mission will be lived out by providing programs such as online content, up to date news, training and events, grants and hands-on organizational improvement initiatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="eligibility">
+        <div class="container">
+            <div class="row">
+                <div class="col col-12 col-md-6">
+                    <h3 class="sectionTitle text-blue" data-aos="fade-right">Who Can Sign Up?</h3>
+                    <p data-aos="fade-right">We want to help you bring quality Christian education to YOUR community. From homeschool pods to traditional brick-and-mortar schools - and everything in between! </p>
+                    <ul class="eligibilityList">
+                        <li data-aos="fade-right">A group of parents or community leaders</li>
+                        <li data-aos="fade-right">Church leaders</li>
+                            <li data-aos="fade-right">Current educators </li>
+                                <li data-aos="fade-right">Donors or benefactors</li>
+                                    <li data-aos="fade-right">Christian education ministries</li>
+                    </ul>
+                    <a href="#" class="button btn-outline-highlight" data-aos="fade-right">Create an Account ›</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="ready">
     <div class="container">
-
-        {{ partial "form.html" .}}
-
-    </div>
-</section>
-
-<div id="inquire" class="mfp-hide">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col text-center">
-                <h2>Inquire Now</h2>
-                <p>Please don't leave yet, fill out the form below...</p>
-                <a href="#" class="button">Button &rsaquo;</a>
+        <div class="row justify-content-center">
+            <div class="col col-12 col-md-11 col-lg-9" data-aos="fade-down">
+                <h3 class="titleReady text-center text-highlight">Ready to Start Your Journey?</h3>
+                <p class="font23">Why wait?! There’s no time like the present to be a beacon of hope and truth in your community. Let’s start a movement to revitalize Christian education in our nation!</p>
+                <a href="#" class="button">Create an Account ›</a>
             </div>
         </div>
     </div>
+</section>
+    {{ partial "footer.html" . }}
 
-</div>
+    {{ partial "scripts.html" . }}
 
-{{ partial "footer.html" . }}
-
-{{ partial "scripts.html" . }}
-
-<!--<script>-->
-<!--    if (window.netlifyIdentity) {-->
-<!--        window.netlifyIdentity.on("init", user => {-->
-<!--            if (!user) {-->
-<!--                window.netlifyIdentity.on("login", () => {-->
-<!--                    document.location.href = "/admin/";-->
-<!--                });-->
-<!--            }-->
-<!--        });-->
-<!--    }-->
-<!--</script>-->
+    <!--<script>-->
+    <!--    if (window.netlifyIdentity) {-->
+    <!--        window.netlifyIdentity.on("init", user => {-->
+    <!--            if (!user) {-->
+    <!--                window.netlifyIdentity.on("login", () => {-->
+    <!--                    document.location.href = "/admin/";-->
+    <!--                });-->
+    <!--            }-->
+    <!--        });-->
+    <!--    }-->
+    <!--</script>-->
 
 </body>
+
 </html>

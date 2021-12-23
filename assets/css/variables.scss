@@ -1,18 +1,19 @@
 /* Default Variables */
-$header-font:proxima-nova, sans-serif;
-$body-font: proxima-nova, sans-serif;
-$button-font: proxima-nova, sans-serif;
+$header-font: "museo-sans",sans-serif;
+$body-font:  "museo-sans",sans-serif;
+$button-font:  "museo-sans",sans-serif;
 
 /* Form and Button Styling */
-$button-radius: 10px;
-$form-radius: 10px;
-$line-height-desktop: 60px;
-$line-height-mobile: 50px;
+$button-radius: 47px;
+$form-radius: 47px;
+$line-height-desktop: 54px;
+$line-height-mobile: 40px;
 
-$base-fontsize: 15px;
+$base-fontsize: 18px;
+$base-lineheight: 1.45em;
 
-$max-width: 1200px;
-$body-background: #fff;
+$max-width: 1280px;
+$body-background: #213452;
 
 $transition: .25s;
 
@@ -22,3 +23,5 @@ $light-grey: #555;
 $btn-color: $default;
 $facebook-blue: #3b5998;
 $twitter-blue: #00ACEE;
+$highlight: #BB895B;
+$blue: #354866;

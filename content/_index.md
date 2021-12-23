@@ -1,11 +1,9 @@
 ---
-title: Home Page Title
+title: SchoolBox
+banner_title: <span>Your Education Vision,</span> Our God-Given Mission.
 description: >-
-   Meta Page Description or used in banner
+   Starting a Christian school is extremely rewarding, but can also be a daunting task. SchoolBox wants to partner with creative, entrepreneurial, passionate and dynamic leaders and parents to help create high-quality Christian education for the next generation.
 sitemap:
   priority: 1
+id: home
 ---
-
-## Another Cool Title
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita laborum natus pariatur veniam vitae. Delectus dicta dolor, doloremque, est facilis inventore laboriosam nostrum officiis praesentium qui recusandae, sunt suscipit tempora.

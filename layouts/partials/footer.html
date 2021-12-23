@@ -1,40 +1,30 @@
 <footer>
-    <div class="container">
-
-        <div class="row">
-            <div class="col text-center">
-                <ul class="social-share">
-                    {{ partial "social-share.html" . }}
-                </ul>
+    <div class="container text-center">
+        <div id="footerLogo">
+            <a href='{{ "/" | relURL }}'><img src='{{ "img/logo_footer.svg" | relURL }}'
+                    alt="{{ .Site.Title }} Logo"></a>
+        </div>
+        <div id="footerHerzog">
+            <div class="herzogLogo">
+                <span>A Product of</span>
+                <img src='{{ "img/logo_herzog.svg" | relURL }}'>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col text-center">
-                <ul id="footerSocial">
-                    {{ partial "social.html" . }}
-                </ul>
-            </div>
+        <div id="footerNav">
+            <ul>
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.footer }}
+                <li class='menu-item{{if or ($currentPage.IsMenuCurrent "footer" .) ($currentPage.HasMenuCurrent "footer" .) }} current-menu-item{{end}}'> <a title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a> </li>
+                {{ end }} 
+            </ul>
         </div>
-
-        <div class="row">
-            <div class="col text-center">
-                <p id="copyright" class="small">&copy; Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script>&nbsp;{{ .Site.Title }} - All Rights Reserved</p>
-            </div>
+        <div id="footerBtn">
+            <a href="#" class="button btn-outline-white"><i class="far fa-user-circle"></i> Account Login</a>
         </div>
-
-        {{ if isset .Site.Params "paid_for" }}
-        <div class="row">
-            <div class="col text-center">
-                <p id="paidfor">
-
-                    {{ .Site.Params.paid_for }}
-
-                </p>
-            </div>
+        <div id="copyright" >Copyright
+            <script type="text/javascript">document.write(new Date().getFullYear());</script> - {{
+            .Site.Title }} - All Rights Reserved
         </div>
-        {{ else }}
-        {{ end }}
 
 
     </div>

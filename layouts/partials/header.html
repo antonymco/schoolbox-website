@@ -1,18 +1,22 @@
 <div id="preloader"></div>
-
-<header class="animated fadeInDown">
-
-    <a href='{{ "/" | relURL }}' id="headerLogo"><img src='{{ "img/logo.svg" | relURL }}' alt="{{ .Site.Title }} Logo"></a>
-
-    <nav>
+<div id="headerBar">
+        <div class="herzogLogo">
+            <span>A Product of</span>
+            <img src='{{ "img/logo_herzog_top.svg" | relURL }}'>
+        </div>
+        <div id="headerAccount"><a href="javascript:void(0)"><i class="far fa-user-circle"></i> My Account</a></div>
+</div>
+<header>
+<div id="headerLogo" class="animated fadeInDown">
+    <a href='{{ "/" | relURL }}' ><img src='{{ "img/logo.svg" | relURL }}' alt="{{ .Site.Title }} Logo"></a>
+</div>
+    <nav class="animated fadeInLeft">
         <a href="javascript:void(0)" id="toggle-menu"><i class="fa fa-bars"></i>&nbsp; Menu</a>
         <ul>
             {{ partial "menu.html" . }}
-            {{ partial "social.html" . }}
-            <li>
-                <a href="#" class="button">Button &rsaquo;</a>
-            </li>
         </ul>
     </nav>
+
+    <div id="headerBtn" class="animated fadeInRight"><a href="#" class="button btn-outline-highlight">Create an Account ›</a></div>
 
 </header>
