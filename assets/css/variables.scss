@@ -13,7 +13,7 @@ $base-fontsize: 18px;
 $base-lineheight: 1.45em;
 
 $max-width: 1280px;
-$body-background: #213452;
+
 
 $transition: .25s;
 
@@ -24,4 +24,6 @@ $btn-color: $default;
 $facebook-blue: #3b5998;
 $twitter-blue: #00ACEE;
 $highlight: #BB895B;
-$blue: #354866;
+$green: #3A4735;
+$blue: $green;
+$body-background: $green;
