@@ -1,0 +1,20 @@
+<div class="ctaBoxes">
+    <div class="row">
+        {{ range first 2 (where (.Site.RegularPages) "Type" "ctaboxes") }}
+        <div class="col col-12 col-md-6">
+            <div class="ctaBx">
+                {{if .Params.image}}
+                <div class="ctaImg"><img src="{{.Params.image}}" /></div>
+                {{end}}
+                <h3>{{.Title}}</h3>
+                <div class="ctaDesc">{{.Description}}</div>
+                {{if .Params.btn_label}}
+                <div class="ctaBtn">
+                    <a href="{{.Params.btn_link}}" class="button">{{.Params.btn_label}}</a>
+                </div>
+                {{end}}
+            </div>
+        </div>
+        {{end}}
+    </div>
+</div>

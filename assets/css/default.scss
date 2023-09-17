@@ -429,3 +429,35 @@ main {
   top:0;
   right:0;
 }
+
+.bg-image {
+  position:absolute;
+  display:block;
+  width:50%;
+  height:100%;
+  top:0;
+  left:0;
+  overflow: hidden;
+  z-index: 0;
+  &:before{
+    content: '';
+    background: linear-gradient(
+      90deg,
+      #ffffff 7.16%,
+      rgba(255, 255, 255, 0) 50%
+    );
+    position: absolute; left: 0; top: 0; position: absolute; width: 100%; height: 100%;
+  }
+  img {
+    object-fit: cover;
+    object-position: center center;
+    width:100%;
+    height:100%;
+  }
+
+  @media(max-width:767px){
+    width:100%;
+    height:350px;
+    position:relative;
+  }
+}

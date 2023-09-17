@@ -2,86 +2,30 @@
 <body id="home">
     {{ partial "header.html" . }}
     <section id="banner">
+        {{if .Params.banner_image}} 
+        <div class="banner-image bg-image"><img class="lazyload" src="{{.Params.banner_image}}" alt="{{ .Site.Params.Title }} {{ .Title }} Banner Background Image" /></div>
+        {{end}}
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col col-12 col-md-10 col-lg-8 text-center animated fadeIn delay-1">
-                    <h3>Coming Soon 2022</h3>
+                    <!-- <h3>Coming Soon 2022</h3> -->
                     <h1>{{ .Params.banner_title | safeHTML }}</h1>
                     <div class="bannerTxt">{{ .Description }}</div>
+                    {{ partial "cta-boxes.html" . }}
                     <div class="bannerLinks">
-                        <a href="#" class="button">Explore the Curriculum ›</a>
+                        <!-- <a href="#" class="button">Explore the Curriculum ›</a> -->
                         <a href="#" class="bannerLink">or Check Your Eligibility ›</a>
                     </div>
+        
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="whats-inside">
-        <div class="container">
-            <h3 class="titleWhatsInside text-center" data-aos="fade-down">What’s Inside:</h3>
-            <div class="row insideRow">
-                <div class="col col-12 col-md-4" data-aos="fade-right">
-                    <div class="insideBx">
-                        <div class="insideIcon"><img src='{{ "img/icon_inside_1.svg" | relURL }}'></div>
-                        <div class="insideMeta">
-                            <h4 class="insideTitle">11 step guide to Starting your School</h4>
-                            <div class="insideTxt">Schoolbox will walk you through the process of starting your Christian school from inception to your first academic years.</div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col col-12 col-md-4" data-aos="fade-right">
-                    <div class="insideBx">
-                        <div class="insideIcon"><img src='{{ "img/icon_inside_2.svg" | relURL }}'></div>
-                        <div class="insideMeta">
-                            <h4 class="insideTitle">1-on-1 Coaching with a Mentor</h4>
-                            <div class="insideTxt">As you move through the SchoolBox program, you will be assigned an experienced mentor who has worked with a school similar to yours. </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col col-12 col-md-4" data-aos="fade-right">
-                    <div class="insideBx">
-                        <div class="insideIcon"><img src='{{ "img/icon_inside_3.svg" | relURL }}'></div>
-                        <div class="insideMeta">
-                            <h4 class="insideTitle">Examples and Best Practices</h4>
-                            <div class="insideTxt">SchoolBox will provide proven examples of school policies and documents to model, while also referring you to resources that can take your school to the next level.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-<div class="text-center" data-aos="fade-right"><a href="#" class="button">Explore the Curriculum ›</a></div>
         </div>
     </section>
-    <section id="about">
-        <div class="container">
-            <div class="row justify-content-end">
-                <div class="col col-12 col-md-6" data-aos="fade-right">
-                    <h3 class="sectionTitle text-blue">About SchoolBox</h3>
-                    <p>Our country is at a crossroads in our educational landscape. Parents, churches, and communities are realizing the importance and value of a high-quality Christian education. SchoolBox wants to walk alongside you and help make your new Christian school a reality!</p>
-                        <p><strong>Herzog Foundation's</strong> mission is to catalyze and accelerate the development of quality Christ-centered K-12 education so that families and culture flourish. We seek to identify areas of growth and gaps in the Christian education space in order to catalyze effective and scalable programs across the nation. Our mission will be lived out by providing programs such as online content, up to date news, training and events, grants and hands-on organizational improvement initiatives.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="eligibility">
-        <div class="container">
-            <div class="row">
-                <div class="col col-12 col-md-6">
-                    <h3 class="sectionTitle text-blue" data-aos="fade-right">Who Can Sign Up?</h3>
-                    <p data-aos="fade-right">We want to help you bring quality Christian education to YOUR community. From homeschool pods to traditional brick-and-mortar schools - and everything in between! </p>
-                    <ul class="eligibilityList">
-                        <li data-aos="fade-right">A group of parents or community leaders</li>
-                        <li data-aos="fade-right">Church leaders</li>
-                            <li data-aos="fade-right">Current educators </li>
-                                <li data-aos="fade-right">Donors or benefactors</li>
-                                    <li data-aos="fade-right">Christian education ministries</li>
-                    </ul>
-                    <a href="#" class="button btn-outline-highlight" data-aos="fade-right">Create an Account ›</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main role="main" class="main-sections">
+        {{ partial "page-sections.html" .}}
+    </main>
+    
 {{/*  <section id="ready">
     <div class="container">
         <div class="row justify-content-center">
